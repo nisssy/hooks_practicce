@@ -6,7 +6,6 @@ import AppContext from '../contexts/AppContext'
 
 
 const Event = ({event}) => {
-    console.log(event.title)
     const {dispatch} =useContext(AppContext)
     const id = event.id
 
