@@ -7,7 +7,6 @@ import Events from './Events'
 import reducer from '../reducers'
 
 
-console.log({AppContext})
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, []);
@@ -15,10 +14,10 @@ const App = () => {
 
 
   return (
-    <AppContext.Provider value={'Providerrrrrrrrrrrrrrrrrr'}>
+    <AppContext.Provider value={{state,dispatch}}>
     <div className="container-fluid">
-        <EventForm state={state} dispatch={dispatch}/>
-        <Events state={state} dispatch={dispatch}/>
+        <EventForm />
+        <Events />
     </div>
     </AppContext.Provider>
   );
